@@ -83,9 +83,9 @@
     <!-- 主要内容END -->
 
         <!--model审核不通过/通过 dialogModelPass-->
-        <el-dialog title="model audit result" :visible.sync="dialogModelPass">
+        <el-dialog title="model censor result" :visible.sync="dialogModelPass">
             <el-form >
-                <el-form-item label="audit result" label-width="120px" >
+                <el-form-item label="censor result" label-width="120px" >
                     <el-input readonly v-if="media.checkresult===1" v-model="auditResultSuccessFilling"> </el-input>
                     <el-input readonly v-if="media.checkresult===-1" v-model="auditResultFailureFilling"> </el-input>
                   </el-form-item>
@@ -114,9 +114,9 @@
         </el-dialog>
 
         <!-- 需要人工审核的弹窗 dialogNeedManualAudit -->
-          <el-dialog title="need manual audit" :visible.sync="dialogNeedManualAudit">
+          <el-dialog title="need manual censor" :visible.sync="dialogNeedManualAudit">
                   <el-form>
-                    <el-form-item label="audit result:" label-width="120px">
+                    <el-form-item label="censor result:" label-width="120px">
                       <el-input readonly v-model="auditResultFilling"> </el-input>
                     </el-form-item>
                     <el-form-item label="porn probability:" >
@@ -128,7 +128,7 @@
           </el-dialog>
 
         <!-- 进行人工审核的弹窗 -->
-        <el-dialog title="manual audit" :visible.sync="dialogManualAudit">
+        <el-dialog title="manual censor" :visible.sync="dialogManualAudit">
           <el-form :model="history.reason">
             <el-form-item label="Does it include porn?" v-if="media.typeid!==0">
               <el-switch style="display: block;margin-top: 8px;"
