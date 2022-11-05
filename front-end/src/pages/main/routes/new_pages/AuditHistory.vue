@@ -3,7 +3,7 @@
         <el-card class="crumbs-card">
             <div class="crumbs">
                 <el-breadcrumb separator="/">
-                    <el-breadcrumb-item :to="{ path: '/main/' }">Home</el-breadcrumb-item>
+                    <el-breadcrumb-item :to="{ path: '/main/Home/' }">Home</el-breadcrumb-item>
                     <el-breadcrumb-item >Audit history</el-breadcrumb-item>
 
                 </el-breadcrumb>
